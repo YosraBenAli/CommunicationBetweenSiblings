@@ -1,0 +1,8 @@
+<h3>Sibling 1</h3>
+<form>
+  <select [(ngModel)]="selectedGender" name="gender" (change)="newMessage()">
+    <option *ngFor="let g of gender">{{g}}</option>
+  </select>
+  &nbsp; &nbsp; Simple component property : {{selectedGender}}
+</form>
+<p>From service : {{message}}</p>
