@@ -11,12 +11,17 @@ export class Sibling1Component implements OnInit {
   selectedGender: string;
 
   message: string;
+  exercices = ['hello', 'hekfk', 'chien'];
 
   constructor(private data: DataService) {
   }
 
   newMessage() {
     this.data.changeMessage(this.selectedGender)
+  }
+
+  test($event) {
+    console.log($event);
   }
 
   ngOnInit() {

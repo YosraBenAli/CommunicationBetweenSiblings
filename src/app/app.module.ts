@@ -6,7 +6,8 @@ import {AppComponent} from './app.component';
 import {Sibling1Component} from './sibling1/sibling1.component';
 import {FormsModule} from '@angular/forms';
 import {Sibling2Component} from './sibling2/sibling2.component';
-import { DataService } from './data.service';
+import {DataService} from './data.service';
+import {NgSelectModule} from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DataService } from './data.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgSelectModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

@@ -1,8 +1,20 @@
 <h3>Sibling 1</h3>
 <form>
-  <select [(ngModel)]="selectedGender" name="gender" (change)="newMessage()">
+  <select [(ngModel)]="selectedGender" name="gender" (change)="newMessage();test($event)">
     <option *ngFor="let g of gender">{{g}}</option>
   </select>
   &nbsp; &nbsp; Simple component property : {{selectedGender}}
 </form>
 <p>From service : {{message}}</p>
+
+<div style="width: 200px;">
+  <ng-select [items]="exercices"
+             placeholder="Choisir un exercice."
+             bindLabel="code"
+             bindValue="id"
+             (change)="test($event)"
+             notFoundText="Aucun résultat trouvé."
+             clearAllText="Vider la sélection">
+  </ng-select>
+</div>
+
